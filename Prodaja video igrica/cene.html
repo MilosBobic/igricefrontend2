@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prodaja video igara</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+  </head>
+  <body>
+    <!--banner slika-->
+    <img id="banner" src="images/banner.jpg" alt="Image" class="banner" onclick="promeniSliku()">
+    <!--Navigacioni meni-->
+  <nav>
+    <ul>
+      <li><a href="index.html">Početna</a></li>
+      <li><a href="cene.html">Cene</a></li>
+    </ul>
+  </nav>
+    <!--beli sloj-->
+	<div class="background-layer"></div>
+	<!--Kako kupiti header-->
+	<h2>Kako kupiti kod nas?</h2>
+	<p class="kako">Kod nas igrice možete kupiti tako što ćete pronaći igricu koja vam se sviđa, pogledati cenovnik i putem kontakt forme naručiti igricu po vašoj želji. Nakon što pošaljete vaše informacije odgovorićemo vam u najkraćem mogućem roku!</p>
+	<!--tabela cena-->
+	<table class="tablecene">
+		<caption class="naslovcene">Cene igrica</caption>
+        <tr>
+            <th class="thcene">GTA V</th>
+            <th class="thcene">SKYRIM</th>
+            <th class="thcene">CIV VI</th>
+			<th class="thcene">CSGO</th>
+        </tr>
+        <tr>
+            <td class="tdcene">5&euro;</td>
+            <td class="tdcene">8&euro;</td>
+            <td class="tdcene">23&euro;</td>
+			<td class="tdcene">2&euro;</td>
+        </tr>
+    </table>
+	<div class="divforma">
+		<form>
+	  
+		<label>Ime</label> <!--label je natpis-->
+		<input type="text" name="ime" placeholder="Vaše ime"> <!--placeholder je to sto pise pre nego sto se ista otkuca-->
+	  
+		<label>Prezime</label>
+		<input type="text" name="prezime" placeholder="Vaše prezime">
+		<label>Email</label>
+	  	<input type="email" name="email" placeholder="Vaša email adresa">
+		
+		<label>Zemlja</label>
+		<select name="zemlja">
+		<option value="Srbija">Srbija</option>
+		</select>
+	  
+		<label>Porudžbina</label>
+		<textarea name="porudzbina" placeholder="Porudžbina" style="height:200px"></textarea>
+	  
+		<input type="submit" value="Poruči" onclick="funkcija_poruci()">
+	  
+		</form>
+		<button id="dugmenosi" onclick="nosi()">^</button>
+	  </div>
+	  <!--Skripte-->
+	  	<!--Poruci dugme-->
+		<script>
+	  		function funkcija_poruci()
+				{
+				alert("Uspešno ste poručili");
+				}
+		</script>
+	<!--Menjanje slike-->
+		<script>
+			function promeniSliku() {
+			let image = document.getElementById('banner');
+			image.src = "images/banner2.jpg";
+			image.alt = "Image";
+			}
+		  </script>
+		   <!--Dugme koje te nosi na pocetak-->
+		   <script>
+			function nosi() {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth"
+				});
+			}
+		</script>
+
+	<p class="made-by">Made by: Milos Bobic</p>
+  </body>
+</html>

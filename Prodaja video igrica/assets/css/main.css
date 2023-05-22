@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #729cce;
+}
+
+.banner{
+  width: 100%;
+  height: 50px;
+}
+nav {
+  position:sticky; /*navigacioni meni uvek ostaje na istom mestu i kad skrolujemo*/
+  width: 100%;
+  top:0;
+  margin-top: -5px; /*da bi nav meni i banner bili jedno do drugog ne znam sto nisu hteli bez da se ide u minus*/
+  z-index:10;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #cfcfcf;
+  display: flex; /*cini da stavke budu jedna pored druge*/
+}
+
+nav li {
+  flex-grow: 1; /*flex ravnomerno postavlja stavke liste horizontalno*/
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000000;
+  text-align: center; /*Tekst se centrira u elementu*/
+}
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin:0 5%; /*margine gore dole 0 levo desno po 5%, cine da je 5% povrsine od desno i levo smanjeno i daje body-ju da se vidi iza*/
+  width: 90%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: -100; /*ovo stackuje background-layer ispod svega ostalog*/
+}
+h1{
+  margin:50 5%;
+  text-decoration: bold;
+  font-family: Arial;
+  text-align: center;
+}
+#opis-prodavnice{
+  margin:50 5%;
+  padding-bottom: 20px;
+  font-family: Arial;
+  text-align: center;
+}
+.tableigrice{
+  table-layout: fixed;
+  margin:0 7%;
+  border: 1px solid;
+}
+#dostupno{
+  margin: 0 12%;
+  font-family:Verdana;
+  text-decoration: underline;
+}
+.slika-igrica{
+  width:100px;
+  height:120px;
+}
+.slika-igrica:hover{
+  filter: grayscale(100%); /*hover cini da kad cursor stavimo preko slike stavi se filter, ovde grayscale koji boje slike prebaci u crno-belo*/
+}
+
+.slika-igrica{
+  transition: filter 0.3s; /*dodaje tranziciju na filter efekat*/
+}
+.made-by{
+  text-align: center;
+  padding: 100px;
+}
+.opis{
+  margin: 0 7%;
+  padding: 10px;
+}
+.tablecene {
+  margin: 15px 5%;
+  border-collapse: fill;
+  width: 90%;
+  background-color: lightgray;
+}
+
+.thcene, .tdcene {
+  border: 2px solid darkgray;
+  padding: 8px;
+  text-align: center;
+}
+
+.naslovcene {
+  text-decoration: bold;
+  padding: 8px;
+  text-align: center;
+  background-color: rgb(100, 100, 100);
+  border-bottom: 2px solid darkgray;
+}
+h2{
+  width: 90%;
+  margin:10px 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.kako{
+  width: 90%;
+  margin:0 5%;
+}
+form{
+  width: 50%;
+}
+input[type=text],input[type=email], select, textarea { /*[type=text] menja samo input tipa text*/
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; /* cini da bude zaobljeno */
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: horizontal; /*Korisnik moze da povecava input box horizontalno ali ne i vertikalno*/
+}
+
+input[type=submit] {
+  background-color: #0454aa;
+  color: white;
+  padding: 12px 20px;
+  border: none; /*brise mu border*/
+  border-radius: 4px;
+  cursor: pointer; /*Menja mis u pointer*/
+}
+
+input[type=submit]:hover {
+  background-color: #001b5a;
+}
+
+.divforma {
+  width: 50%;
+  height: auto;
+  margin: 0 5%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#dugmenosi {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+h3{
+  width:90%;
+  margin:10px 5%;
+}
+#odgovor {
+  margin:20px 5%;
+}
+.check{
+  margin-left:5%;
+}

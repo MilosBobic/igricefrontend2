@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prodaja video igara</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+  </head>
+  <body>
+    <!--banner slika-->
+    <img id="banner" src="images/banner.jpg" alt="Image" class="banner" onclick="promeniSliku()">
+    <!--Navigacioni meni-->
+  <nav>
+    <ul>
+      <li><a href="index.html">Početna</a></li>
+      <li><a href="cene.html">Cene</a></li>
+    </ul>
+  </nav>
+  <!--beli sloj-->
+  <div class="background-layer"></div>
+    <!--ime i opis-->
+    <h1>Igrice QWERTY</h1>
+      <p id="opis-prodavnice" onclick="PromeniQwerty();">Dobrodošli u prodavnicu QWERTY</p>
+      <p class="opis">Kod nas možete kupiti neke od najboljih igrica po povoljnim cenama!</p>
+    <!--Dostupne igrice-->
+    <p id="dostupno">Ovo su trenutno dostupne igrice na našem sajtu:</p>
+    <table class="tableigrice">
+      <tr>
+        <td>
+          <img class="slika-igrica" src="images/CSGO.jpg" alt="Image 1">
+          <p>Counter Strike: Global Offensive</p>
+        </td>
+        <td>
+          <img class="slika-igrica" src="images/SKYRIM.jpg" alt="Image 2">
+          <p>The Elder Scrolls V: Skyrim</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img class="slika-igrica" src="images/CIVVI.jpg" alt="Image 3">
+          <p>Sid Meiers: Civilization VI</p>
+        </td>
+        <td>
+          <img class="slika-igrica" src="images/GTAV.jpg" alt="Image 4">
+          <p>Grand Theft Auto V</p>
+        </td>
+      </tr>
+    </table>
+    <button id="dugmenosi" onclick="nosi()">^</button>
+
+    <h3>Da li bi ste preporučili prijateljima?</h3>
+
+    <label>
+      <input class="check" type="radio" name="opcija" value="opcija1" onclick="poruka()"> Da
+    </label>
+  <br>
+    <label>
+      <input class="check" type="radio" name="opcija" value="opcija2" onclick="poruka()"> Ne
+    </label>
+
+    <div id="odgovor"></div>
+      <p class="made-by">Made by: Milos Bobic</p>
+    <!--Skripte-->
+    <!--Menjanje paragrafa-->
+    <script>
+      function PromeniQwerty() {
+      var paragraf=document.getElementById('opis-prodavnice');
+      paragraf.innerHTML="QWERTY";
+      }
+      </script>
+    <!--Menjanje slike-->
+      <script>
+        function promeniSliku() {
+        let slika = document.getElementById('banner');
+        slika.src = "images/banner2.jpg";
+        slika.alt = "Image";
+        }
+      </script>
+    <!--Dugme koje te nosi na pocetak-->
+    <script>
+      function nosi() {
+          window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          });
+      }
+  </script>
+  <!--Checkbox-->
+  <script>
+    function poruka() {
+        var radio = document.querySelector('input[name="opcija"]:checked'); /*Selektuje cekiran radio sa imenom opcija*/
+        var poruka = document.getElementById("odgovor");
+        var odg = "";
+
+        if (radio && radio.value === "opcija1") {
+            odg = "Hvala :)";
+        } else if (radio && radio.value === "opcija2") {
+            odg = "Hvala :(";
+        }
+
+        odgovor.textContent = odg;
+    }
+</script>
+  </body>
+</html>
